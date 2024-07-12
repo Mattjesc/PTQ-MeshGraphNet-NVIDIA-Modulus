@@ -1,4 +1,4 @@
-# PTQ-MeshGraphNet-NVIDIA-Modulus
+# Post-Training Quantization for MeshGraphNet using NVIDIA Modulus: Cardiovascular Flow Simulation Implementation
 
 ## Overview
 
@@ -53,15 +53,41 @@ After setting up the NVIDIA Modulus repository and preparing the bloodflow examp
 | Relative error in flow rate | 4.00%          | 33.35%      |
 | Rollout time                | 0.653 seconds  | 0.535 seconds |
 
+
+Figure 1: Original Model Rollout and Relative Error Values
+
+![image](https://github.com/user-attachments/assets/4f78dcf9-ffb0-4b23-b713-2c9e8a926962)
+
+Figure 2: Quantized (PTQ) Model Rollout and Relative Error Values
+
+![image](https://github.com/user-attachments/assets/2a0c97e6-7f40-40bf-a527-c9f4a41cd4b9)
+
+Figure 3: Original Model Pressure Graph
+
+![image](https://github.com/user-attachments/assets/bac7e8a2-5dc2-434e-b720-5a4c7fda808d)
+
+Figure 4: Quantized (PTQ) Model Pressure Graph
+
+![image](https://github.com/user-attachments/assets/ef9543b6-8ef0-49c3-b56d-2cdc56c37c60)
+
+Figure 5: Original Model Flow Rate Graph
+
+![image](https://github.com/user-attachments/assets/9472b233-2a4e-4ba9-9f60-d7067f651c55)
+
+Figure 6: Quantized (PTQ) Model Flow Rate Graph
+
+![image](https://github.com/user-attachments/assets/0f53f947-9c65-4905-85c2-0f7d13be6f30)
+
+
 ## Justifications and Explanations
 
 ### Why Quantize Using PTQ?
 
-Post-training quantization reduces the model size and memory usage, making it feasible to run large models on resource-limited hardware like a single RTX 3090 GPU. PTQ specifically optimizes models for efficient inference without significant loss in performance, balancing the trade-off between computational efficiency and accuracy.
+Post-training quantization reduces the model size and memory usage, making it feasible to run large models on resource-limited hardware. PTQ specifically optimizes models for efficient inference, with the trade-off between computational efficiency and accuracy.
 
 ### Hardware Considerations
 
-The quantization process and model evaluations are performed on an RTX 3090 GPU. Different hardware setups, particularly variations in CPU capabilities, may yield varying outcomes in terms of inference speed and performance.
+The quantization process and model evaluations are performed on a single RTX 3090 GPU. Different hardware setups, particularly variations in CPU capabilities, may yield varying outcomes in terms of training/inference speed and performance.
 
 ## Acknowledgements
 
